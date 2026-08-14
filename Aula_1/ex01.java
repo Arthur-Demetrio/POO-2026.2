@@ -7,7 +7,7 @@ public class ex01 {
         System.out.print("What's your name? ");
         String name = scanner.next();
 
-        System.out.println("Hello " + name);
+        System.out.println("Hello " + name +"!");
 
         scanner.close();
     }
