@@ -32,19 +32,19 @@ int main(){
     while(lop==1){
    cout << "Operações: " << endl;
    cout << "1 - Depositar" << endl << "2 - Sacar" << endl << "3 - Ver Saldo" << endl;
-   cin  >> operacao
+   cin  >> operacao;
    if( operacao==1){
     cout << "insira o Valor a Depositar: ";
     cin >> x.valor;
-    cout << x.depositar()
+    cout << x.depositar() << endl;
    }
    else if( operacao==2){
     cout << "insira o Valor a Sacar: ";
     cin >> x.valor;
-    cout << x.sacar() << 
+    cout << x.sacar() << endl;
    }
-   else if( operacao==3){
-    cout << "seu saldo é: R$" << x.saldo() << endl;
+   else {
+    cout << "seu saldo é: R$" << x.saldo_atual() << endl;
    }
    cout << "deseja realizar mais uma operação?" << endl << "1 - SIM     0 - NÂO" << endl;
    cin >> lop;
