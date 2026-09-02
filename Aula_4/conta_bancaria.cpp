@@ -27,7 +27,7 @@ int main(){
     cin >> x.titular;
     cout << "qual é o numero da conta? " ;
     cin >> x.conta;
-    cout << "qual é o saldo da conta?";
+    cout << "qual é o saldo da conta? ";
     cin >> x.saldo;
     while(lop==1){
    cout << "Operações: " << endl;
@@ -36,12 +36,22 @@ int main(){
    if( operacao==1){
     cout << "insira o Valor a Depositar: ";
     cin >> x.valor;
-    cout << x.depositar() << endl;
+    if(x.valor<0){
+        cerr << "impossivel depositar valores negativos! ";
+    }
+    else{
+        cout << x.depositar() << endl;
+    }
    }
    else if( operacao==2){
     cout << "insira o Valor a Sacar: ";
     cin >> x.valor;
-    cout << x.sacar() << endl;
+    if(x.valor>x.saldo || x.saldo<0){
+        cerr << "impossivel sacar este valor, ";
+    }
+    else{
+        cout << x.sacar() << endl;
+    }
    }
    else {
     cout << "seu saldo é: R$" << x.saldo_atual() << endl;
